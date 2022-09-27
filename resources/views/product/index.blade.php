@@ -12,7 +12,7 @@
     <div class="carousel-item {{ $p->id==1? 'active' :''}} image_slider">
         <a href="product/{{$p->id}}">
       <img src="{{$p->image}}" class="d-block w-100"></a>
-      <div class="carousel-caption">
+      <div class="carousel-caption " style="flout-start">
         <h3>{{$p->name}}</h3>
         <p>{{$p->description}}</p>
     </div>
@@ -21,18 +21,26 @@
 
 
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+
+</div>
+
+<hr>
+<div class="table-responsive container p-5 m-5">
+<table>
+    <tbody>
+    <tr>
+        @foreach ($item as $i)
+
+        <td class="text-center text-success "><a href="product/{{$i->id}}"> <img src="{{$i->image}}" alt="" width="300px" height="400px"> <h3> {{$i->name}}</h3></a> </td>
+
+        @endforeach
+    </tr>
+</tbody>
+</table>
 </div>
 <style>
     .image_slider{
-        height: 500px;
+        height: 900px;
     }
     .carousel-caption{
         background-color:rgba(13, 13, 13, 0.38) !important;

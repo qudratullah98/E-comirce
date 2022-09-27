@@ -23,4 +23,5 @@ Route::controller(userController::class)->group(function(){
 
 Route::controller(ItemController::class)->group(function(){
     Route::get("product/{id}","find");
+    Route::post("product","store");
 });
