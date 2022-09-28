@@ -10,8 +10,8 @@
 
     @foreach ($item as $p)
     <div class="carousel-item {{ $p->id==1? 'active' :''}} image_slider">
-        <a href="product/{{$p->id}}">
-      <img src="{{$p->image}}" class="d-block w-100"></a>
+
+      <img src="{{$p->image}}" class="d-block w-100">
       <div class="carousel-caption " style="flout-start">
         <h3>{{$p->name}}</h3>
         <p>{{$p->description}}</p>

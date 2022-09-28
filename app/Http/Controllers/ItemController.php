@@ -23,4 +23,8 @@ class ItemController extends Controller
             return redirect("login");
         }
     }
+    static function totalCard(){
+         $cardid=session()->get("user")['id'];
+       return $card=card::where("user_id",$cardid)->count();
+    }
 }

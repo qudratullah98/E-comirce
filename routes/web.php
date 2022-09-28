@@ -18,6 +18,7 @@ route::get("dashbord",function(){
 
 Route::controller(userController::class)->group(function(){
     Route::get("login","index");
+    Route::get("/logout","logout");
     Route::post("login","login");
 });
 
